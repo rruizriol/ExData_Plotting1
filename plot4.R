@@ -1,5 +1,5 @@
 rawData <- read.table("../data/household_power_consumption.txt", header=F, sep=";", colClasses = "character")
-readData <- rawData[grepl("^[12]/2/2007", rawData[,1]),]
+readData <- rawData[grepl("^[12]/2/2007", rawData[,1]),] 
 readData <- cbind(strptime(paste(readData[,1], readData[,2]), format="%d/%m/%Y %H:%M:%S"), readData[,-c(1,2)])
 names(readData) <- c("Date/Time", "Global_active_power", "Global_reactive_power", "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 

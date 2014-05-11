@@ -3,7 +3,7 @@ getdata <- function(date1, date2) {
   return(readdata[readdata$Date %in% c(date1,date2) ,])
 }
 
-processdata <- function(data) {
+processdata <- function(data) { 
   data[data == "?"] = NA
   
   data$Global_active_power = as.numeric(as.character(data$Global_active_power))

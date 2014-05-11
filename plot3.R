@@ -1,7 +1,7 @@
 source("getdata.R")
 data <- getdata("1/2/2007","2/2/2007")
 
-data <- processdata(data)
+data <- processdata(data) 
 
 png(file="./graphs/plot3.png",width=504,height=504)
 par(mfrow = c(1,1)) 
